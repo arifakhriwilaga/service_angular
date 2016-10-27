@@ -1,5 +1,5 @@
 angular.module('app', ['app.services', 'app.controllers']);
-var moduleCtrl = angular.module('app.controllers', ['ui.router']);
+var moduleCtrl = angular.module('app.controllers', []);
 
 // controller example service
 moduleCtrl.controller('myCtrl', function($scope, cstService) {
@@ -62,28 +62,28 @@ moduleCtrl.directive("directive", function() {
 // });
 
 // UI Route
-moduleCtrl.config(function($stateProvider) {
-  var serviceState = {
-    name: 'service',
-    url: '/service',
-    templateUrl: '/service.html',
-    controller: 'myCtrl'
-  }
+// moduleCtrl.config(function($stateProvider) {
+//   var serviceState = {
+//     name: 'service',
+//     url: '/service',
+//     templateUrl: '/service.html',
+//     controller: 'myCtrl'
+//   }
 
-  var aboutState = {
-    name: 'about',
-    url: '/about',
-    template: '<h3>Its the UI-Router hello world app!</h3>'
-  }
-  var httpState = {
-    name: 'http',
-    url: '/http',
-    templateUrl: '/http.html'
-  }
+//   var aboutState = {
+//     name: 'about',
+//     url: '/about',
+//     template: '<h3>Its the UI-Router hello world app!</h3>'
+//   }
+//   var httpState = {
+//     name: 'http',
+//     url: '/http',
+//     templateUrl: '/http.html'
+//   }
 
-  $stateProvider.state(serviceState);
-  $stateProvider.state(aboutState);
-  $stateProvider.state(httpState);
+//   $stateProvider.state(serviceState);
+//   $stateProvider.state(aboutState);
+//   $stateProvider.state(httpState);
 
-});
+// });
 
